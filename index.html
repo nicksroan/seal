@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Web Page</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background-color: white;
+      background: url("https://images.unsplash.com/photo-1505781769017-55fdc40def2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80");
+      font-family: "Open Sans", sans-serif;
+      padding: 0% 7%;
+    }
+
+    .all {
+      background-color: #00afb9;
+      height: 200vh;
+    }
+
+    .banner {
+      background-color: #0081a7;
+      height: 100px;
+    }
+
+    .content {
+      padding: 10px;
+    }
+    h1 {
+      position: relative;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+    p {
+      border: 1px solid #615756;
+      padding: 5px;
+      width: 60%;
+      color: #1a1f16;
+    }
+    img {
+      display: block;
+      margin-left: auto;
+      width: 50%;
+    }
+    #btn {
+      margin-top: 15%;
+      margin-left: auto;
+      margin-right: 10px;
+      float: right;
+    }
+    .rotate {
+      animation: rotation 2s infinite linear;
+      animation-iteration-count: 2;
+    }
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+  </style>
+  <body>
+    <div class="all">
+      <div class="banner">
+        <h1>Welcome to my web page!!</h1>
+      </div>
+      <div class="content">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus odio
+          autem sint animi, consequuntur nulla voluptatibus officia cumque qui
+          libero beatae laborum asperiores quasi alias similique ab placeat
+          nostrum consequatur! <br /><br />
+
+          <b>Click the seal!!</b>
+        </p>
+        <img
+          src="https://ichef.bbci.co.uk/news/976/cpsprodpb/159B7/production/_115530588_sealpopulationpa5.jpg"
+          alt="A picture of a waving seal on a beach"
+          width="400px"
+          class=""
+        />
+
+        <script>
+          const img = document.querySelector("img");
+          const btn = document.querySelector("#btn");
+          img.addEventListener("click", () => {
+            img.classList.add("rotate");
+            setTimeout(() => {
+              img.classList.remove("rotate");
+            }, 4000);
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
