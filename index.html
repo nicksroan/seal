@@ -61,9 +61,9 @@
       const btn = document.querySelector("#btn");
       btn.addEventListener("click", () => {
         img.classList.add("rotate");
-        setTimeout(() => {
-          img.classList.remove("rotate");
-        }, 4000);
+      });
+      img.addEventListener("animationend", () => {
+        img.classList.remove("rotate");
       });
     </script>
   </body>
